@@ -1,0 +1,45 @@
+---
+title: "Hacker News Scraper"
+description: "A cybersecurity news aggregator that scrapes and displays the latest security news from multiple sources."
+technologies:
+  - PHP
+  - HTML
+  - CSS
+  - JavaScript (Bootstrap for styling)
+  - SimpleXML (PHP for RSS parsing)
+  - Hacker News API
+
+how_it_works:
+  - The application fetches the latest cybersecurity news from multiple sources using RSS feeds and the Hacker News API.
+  - PHP's `simplexml_load_file()` is used to parse RSS feeds and extract news titles, URLs, and publication dates.
+  - The Hacker News API provides top stories, which are filtered to show cybersecurity-related content.
+  - The aggregated news is sorted by publication date and displayed in a user-friendly format.
+  - The UI is built using Bootstrap for a clean and responsive design.
+
+sources_used:
+  - Hacker News API: https://hacker-news.firebaseio.com/v0/topstories.json
+  - The Hacker News: https://feeds.feedburner.com/TheHackersNews
+  - Graham Cluley: https://grahamcluley.com/feed/
+  - Schneier on Security: https://www.schneier.com/blog/atom.xml
+  - Krebs on Security: https://krebsonsecurity.com/feed/
+  - Dark Reading: https://www.darkreading.com/rss/all.xml
+  - Troy Hunt: https://www.troyhunt.com/rss/
+  - WeLiveSecurity: https://www.welivesecurity.com/feed/
+  - Sophos News: https://news.sophos.com/en-us/feed/
+  - Infosecurity Magazine: https://www.infosecurity-magazine.com/rss/news/
+  - Reddit r/cybersecurity: https://www.reddit.com/r/cybersecurity/.rss
+
+deployment_instructions:
+  - Clone the repository: `git clone https://github.com/Minima1vi6es/hacker-news-scraper.git`
+  - Ensure the server has PHP installed and the `php-xml` extension enabled.
+  - Place the files in the appropriate web directory (e.g., `/var/www/html/portfolio/hacker-news-scraper`).
+  - Ensure file permissions are correctly set (`sudo chmod -R 755 /var/www/html/portfolio/hacker-news-scraper`).
+  - Restart Apache: `sudo systemctl restart apache2`
+  - Access the application at `https://portfolio.digitalfortificationsgroup.com/hacker-news-scraper`
+
+author:
+  name: "Mark Gustafson"
+  github: "https://github.com/Minima1vi6es"
+  website: "https://portfolio.digitalfortificationsgroup.com"
+
+license: "MIT"
